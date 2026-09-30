@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berral Joyeros · Joyería y relojería en Medina Azahara, Córdoba</title>
+<meta name="description" content="Joyería y relojería de barrio en Av. de Medina Azahara 8, Córdoba. Anillos de compromiso y alianzas, regalos, comunión, relojes Citizen y transformación de joyas antiguas en nuestro taller. Llámanos o escríbenos por WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15120F">
+<link rel="icon" href="../img/favicon.png">
+<link rel="preload" href="../fonts/josefin-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/newsreader-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"JewelryStore","name":"Berral Joyeros","url":"https://berraljoyeros.com/","logo":"https://berraljoyeros.com/wp-content/uploads/2018/07/logo-Berral.png","image":"https://berraljoyeros.com/wp-content/uploads/2018/06/fondo-1-1.jpg","telephone":"+34957453111","address":{"@type":"PostalAddress","streetAddress":"Av. de Medina Azahara, 8","addressLocality":"Córdoba","postalCode":"14005","addressRegion":"Córdoba","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":37.8853168,"longitude":-4.7901912},"hasMap":"https://www.google.com/maps/place/?q=place_id:ChIJLQxzHl_fbQ0ROjCvvBsyAs8","sameAs":["https://www.instagram.com/iloveberral/","https://www.facebook.com/p/Berral-Joyeros-100063511482303/"],"priceRange":"€€"}
+</script>
+<style>
+@font-face{font-family:'Josefin Sans';src:url(../fonts/josefin-var-latin.woff2) format('woff2');font-weight:100 700;font-style:normal;font-display:optional}
+@font-face{font-family:'Newsreader';src:url(../fonts/newsreader-var-latin.woff2) format('woff2');font-weight:200 800;font-style:normal;font-display:optional}
+@font-face{font-family:'Newsreader';src:url(../fonts/newsreader-italic-latin.woff2) format('woff2');font-weight:300 500;font-style:italic;font-display:optional}
+
+:root{
+  /* Paleta MEDIDA: granito y luz en la foto de su fachada; gema en el PNG del logo */
+  --granito:#15120F; --granito-2:#1E1A16; --junta:rgba(236,226,210,.07);
+  --metal:#D9CCB6;           /* letras corpóreas de la fachada */
+  --crema:#EDE4D6;           /* texto sobre granito */
+  --luz:#E3C8A3;             /* luz del escaparate */
+  --ambar:#A57A39;           /* cortina y latón */
+  --gema:#F09494;            /* la gema del logo: el único acento */
+  --papel:#F6EFE4; --tinta:#231D18; --tinta-suave:#5A4F45;
+  --display:'Josefin Sans',Futura,'Century Gothic',sans-serif;
+  --texto:'Newsreader',Georgia,serif;
+  --curva:cubic-bezier(.22,.8,.28,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--granito);color:var(--tinta);font:400 1.125rem/1.6 var(--texto);font-optical-sizing:auto}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+main{overflow-x:clip}
+.wrap{max-width:76rem;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.ico{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.kicker{font:600 .78rem/1.2 var(--display);letter-spacing:.24em;text-transform:uppercase;margin:0 0 1rem}
+h1,h2,h3{font-family:var(--display);font-weight:300;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.02}
+p{margin:0 0 1em}
+:focus-visible{outline:2px solid var(--gema);outline-offset:3px}
+
+/* Granito en placas: las juntas de su fachada y el grano de la piedra */
+.granito{background-color:var(--granito);color:var(--crema);
+  background-image:
+    linear-gradient(var(--junta) 1px,transparent 1px),
+    linear-gradient(90deg,var(--junta) 1px,transparent 1px),
+    radial-gradient(rgba(236,226,210,.06) .6px,transparent .9px),
+    radial-gradient(rgba(0,0,0,.35) .7px,transparent 1px);
+  background-size:12rem 12rem,12rem 12rem,5px 5px,7px 7px;
+  background-position:-1px -1px,-1px -1px,0 0,2px 3px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:3rem;padding:.8em 1.35em;border-radius:999px;font:600 .95rem/1 var(--display);letter-spacing:.06em;text-decoration:none;text-transform:uppercase;transition:transform .35s var(--curva),background-color .35s var(--curva)}
+.btn:hover{transform:translateY(-2px)}
+.btn-gema{background:var(--gema);color:var(--granito)}
+.btn-linea{border:1px solid rgba(217,204,182,.45);color:var(--crema)}
+.btn-linea:hover{background:rgba(217,204,182,.08)}
+.btn-tinta{background:var(--tinta);color:var(--papel)}
+
+/* Franja de propuesta */
+.franja{background:#0B0908;color:#B9AE9C;font:400 .8rem/1.4 var(--display);letter-spacing:.04em;text-align:center;padding:.5rem 1rem}
+.franja a{color:var(--gema)}
+
+/* Cabecera fija */
+.cab{position:sticky;top:0;z-index:40;background:rgba(21,18,15,.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(217,204,182,.12)}
+.cab .wrap{display:flex;align-items:center;gap:1.5rem;min-height:4.5rem}
+.cab-logo img{width:9.5rem}
+.cab nav{display:flex;gap:1.5rem;margin-left:auto}
+.cab nav a{white-space:nowrap;font:400 .86rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--metal);text-decoration:none;padding:.5rem 0;border-bottom:1px solid transparent}
+.cab nav a:hover{border-color:var(--gema)}
+.cab-tel{display:flex;align-items:center;gap:.5rem;font:600 1rem/1 var(--display);letter-spacing:.06em;color:var(--crema);text-decoration:none;white-space:nowrap}
+.cab .btn{min-height:2.6rem;padding:.6em 1.1em;font-size:.82rem}
+
+/* ============ PORTADA · el solitario ============ */
+.portada{position:relative;min-height:min(56rem,calc(100svh - 6.5rem));display:flex;flex-direction:column;justify-content:space-between;padding:clamp(2.5rem,6vw,5rem) 0 clamp(2rem,4vw,3rem);isolation:isolate}
+.solitario{position:absolute;z-index:-1;left:74%;top:-280px;width:3000px;height:auto;transform:translateX(-50%);pointer-events:none;overflow:visible}
+.solitario .aro{fill:none;stroke:var(--metal);stroke-width:13;stroke-linecap:round}
+.solitario .gema{fill:var(--gema);stroke:#0E0C0A;stroke-width:10;stroke-linejoin:round}
+.solitario .luz-punto{fill:#fff}
+.portada>.wrap{width:100%}
+.portada-texto>*{max-width:40rem}
+.portada .kicker{color:var(--metal)}
+.portada h1{font-size:clamp(2.5rem,5.4vw,4.6rem);line-height:.98;color:var(--crema);font-weight:300}
+.portada h1 em{font-family:var(--texto);font-style:italic;font-weight:300;color:var(--gema);letter-spacing:-.02em}
+.portada .entrada{font-size:clamp(1.1rem,1.5vw,1.25rem);color:#CFC4B4;max-width:34rem;margin:0 0 1.6rem}
+.portada-pie{position:relative;display:grid;grid-template-columns:1fr auto;align-items:end;gap:1.5rem 2rem;padding-top:9.5rem}
+.acciones{display:flex;flex-wrap:wrap;gap:.75rem}
+.dato-visita{font:400 .9rem/1.5 var(--display);letter-spacing:.06em;color:var(--metal);text-align:right}
+.dato-visita strong{display:block;font-weight:600;color:var(--crema);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+.cincuenta{position:absolute;right:clamp(1rem,4vw,2.5rem);top:clamp(2.5rem,6vw,5rem);font:300 .8rem/1.4 var(--display);letter-spacing:.34em;text-transform:uppercase;color:var(--metal);writing-mode:vertical-rl;opacity:.8}
+
+/* El engaste: la piedra baja y se asienta en el vértice del aro; luego un destello */
+@media (prefers-reduced-motion:no-preference){
+  .js .solitario .piedra{animation:engaste 1.5s var(--curva) .25s both}
+  .js .solitario .destello{animation:destello 1.1s ease-in-out 1.8s both}
+  .js .solitario .aro{animation:aparece .9s ease-out both}
+}
+@keyframes engaste{0%{transform:translateY(-190px);opacity:0}45%{opacity:1}72%{transform:translateY(9px)}86%{transform:translateY(-3px)}100%{transform:translateY(0);opacity:1}}
+@keyframes destello{0%{transform:translateX(-260px) skewX(-18deg);opacity:0}20%{opacity:.85}100%{transform:translateX(260px) skewX(-18deg);opacity:0}}
+@keyframes aparece{from{opacity:0}to{opacity:1}}
+.solitario .destello{opacity:0}
+
+/* Separador: el solitario pequeño */
+.sep{display:block;width:12rem;height:auto;margin:0 auto 2.5rem;overflow:visible}
+.sep .aro{fill:none;stroke:currentColor;stroke-width:9;stroke-linecap:round}
+.sep .gema{fill:var(--gema);stroke:var(--tinta);stroke-width:9;stroke-linejoin:round}
+.granito .sep{color:var(--metal);--s-borde:#0E0C0A}
+
+/* ============ EL ESCAPARATE ============ */
+.escaparate{padding:clamp(4rem,9vw,7.5rem) 0}
+.escaparate .cabeza{display:grid;grid-template-columns:1fr 1fr;gap:1rem 3rem;align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.escaparate .cabeza p{color:#CFC4B4;max-width:32rem;margin:0}
+.escaparate .kicker{color:var(--gema)}
+.vitrinas{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(2.5rem,5vw,4.5rem) clamp(1.5rem,4vw,3.5rem)}
+.vitrina{display:flex;flex-direction:column}
+.hueco{position:relative;aspect-ratio:4/3;border:7px solid transparent;border-image:linear-gradient(160deg,#C9A15E,#7C5A26 45%,#B8904E) 1;
+  background:
+   linear-gradient(90deg,rgba(0,0,0,.25),transparent 12%,transparent 88%,rgba(0,0,0,.25)),
+   radial-gradient(120% 90% at 50% 0%,#FBF1E1 0%,#F1DEC0 45%,var(--luz) 100%);
+  box-shadow:inset 0 14px 22px -10px rgba(0,0,0,.45),0 30px 50px -30px rgba(0,0,0,.9);overflow:hidden}
+.hueco::before,.hueco::after{content:"";position:absolute;top:0;bottom:0;width:11%;
+  background:repeating-linear-gradient(90deg,#8C6326 0 6px,#B98A45 6px 12px,#9C7033 12px 18px);opacity:.92;z-index:1}
+.hueco::before{left:0;box-shadow:6px 0 14px rgba(0,0,0,.25)} .hueco::after{right:0;box-shadow:-6px 0 14px rgba(0,0,0,.25)}
+.hueco .foco{position:absolute;top:0;left:50%;width:70%;height:10px;transform:translateX(-50%);background:linear-gradient(#fff9ee,transparent);filter:blur(3px);opacity:.9;z-index:2}
+.piezas{position:absolute;inset:9% 13% 15%;display:flex;align-items:flex-end;justify-content:center;gap:5%}
+.piezas img{mix-blend-mode:multiply;max-height:100%;width:auto;object-fit:contain;flex:0 1 auto;min-width:0}
+.piezas img.p-s{max-height:62%} .piezas img.p-m{max-height:82%}
+.peana{position:absolute;left:11%;right:11%;bottom:13%;height:3px;background:linear-gradient(90deg,transparent,rgba(124,90,38,.55),transparent);z-index:1}
+.tarjeta{position:absolute;left:15%;bottom:5%;z-index:3;background:#FFFCF6;color:var(--tinta);padding:.45rem .7rem .4rem;font:600 .72rem/1.25 var(--display);letter-spacing:.08em;text-transform:uppercase;box-shadow:0 6px 10px -4px rgba(60,40,10,.45);transform:perspective(300px) rotateX(12deg);border-top:2px solid #E9DDC8}
+.tarjeta b{display:block;font:400 1.15rem/1.1 var(--texto);letter-spacing:0;text-transform:none;color:#8A5A1E}
+.placa{padding:1.3rem 0 0}
+.placa h3{font-size:clamp(1.5rem,2.4vw,2rem);color:var(--crema);letter-spacing:.02em}
+.placa p{color:#C4B9A8;font-size:1.05rem;margin:.5rem 0 .9rem;max-width:30rem}
+.placa .cita{font-style:italic;color:var(--metal);font-size:1rem}
+.placa .cita span{font:400 .75rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:#8F8577;margin-left:.4rem}
+.enlaces{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.enlaces a{display:inline-flex;align-items:center;gap:.4rem;font:600 .82rem/1.3 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--gema);text-decoration:none;padding:.35rem 0;border-bottom:1px solid rgba(240,148,148,.35)}
+.enlaces a.sec{color:var(--metal);border-color:rgba(217,204,182,.25)}
+
+/* ============ TU JOYA DE SIEMPRE · el sobre del taller ============ */
+.taller{background:var(--papel);color:var(--tinta);padding:clamp(4rem,9vw,7.5rem) 0}
+.taller .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:start}
+.taller .kicker{color:#9A5E4E}
+.taller h2 em{font-family:var(--texto);font-style:italic;font-weight:300;color:#B0625A}
+.taller .lead{font-size:1.25rem;margin:1.4rem 0 1.6rem;max-width:34rem}
+.conserva{list-style:none;padding:0;margin:0 0 1.8rem;display:grid;gap:.8rem;max-width:32rem}
+.conserva li{display:grid;grid-template-columns:1.6rem 1fr;gap:.6rem;align-items:baseline}
+.conserva li::before{content:"";width:.8rem;height:.8rem;margin-top:.35rem;background:var(--gema);clip-path:polygon(22% 0,78% 0,100% 30%,50% 100%,0 30%)}
+.nota-fuente{font-size:.9rem;color:var(--tinta-suave)}
+
+.sobre{position:relative;background:#EAD6B4;color:#3A2A18;padding:2.2rem clamp(1.2rem,3vw,2rem) 1.8rem;border-radius:4px;box-shadow:0 30px 60px -35px rgba(60,35,10,.6),inset 0 0 0 1px rgba(90,60,20,.12);
+  background-image:radial-gradient(rgba(90,60,20,.07) .7px,transparent 1px);background-size:6px 6px}
+.sobre::before{content:"";position:absolute;left:0;right:0;top:0;height:2.6rem;background:#E1C99F;clip-path:polygon(0 0,100% 0,100% 30%,50% 100%,0 30%);opacity:.9;border-radius:4px 4px 0 0}
+.sobre-cab{position:relative;display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.3rem;padding-top:.6rem}
+.sobre-cab img{width:7.5rem;mix-blend-mode:multiply}
+.sobre-cab span{font:600 .7rem/1.3 var(--display);letter-spacing:.2em;text-transform:uppercase;text-align:right;color:#6C5433}
+.campo{border-top:1px dashed rgba(58,42,24,.35);padding:.9rem 0 1rem}
+.campo legend,.campo label.t{display:block;font:600 .72rem/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:#6C5433;margin-bottom:.7rem;padding:0}
+fieldset.campo{border-left:0;border-right:0;border-bottom:0;margin:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{cursor:pointer;font:400 1rem/1 var(--texto);padding:.55rem .85rem;border:1px solid rgba(58,42,24,.35);border-radius:999px;background:rgba(255,250,240,.45);transition:background-color .25s,border-color .25s}
+.chips input:checked+label{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.chips input:focus-visible+label{outline:2px solid #B0625A;outline-offset:2px}
+.sobre textarea{width:100%;min-height:4.2rem;resize:vertical;font:400 1rem/1.4 var(--texto);color:#3A2A18;background:rgba(255,250,240,.55);border:1px solid rgba(58,42,24,.3);border-radius:3px;padding:.6rem .7rem}
+.sobre .btn{width:100%;justify-content:center;margin-top:.6rem}
+.sobre small{display:flex;gap:.4rem;align-items:center;margin-top:.8rem;font-size:.88rem;color:#6C5433}
+
+/* ============ LA TALLA · el aro sobre la pantalla ============ */
+.talla{padding:clamp(4rem,9vw,7.5rem) 0}
+.talla .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.talla .kicker{color:var(--gema)}
+.talla p{color:#CFC4B4;max-width:31rem}
+.talla h2{margin-bottom:1.4rem}
+.real{font:400 .72rem/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:#8F8577;margin:-.4rem 0 0}
+.medidor{display:grid;justify-items:center;gap:1.2rem}
+.aro-vivo{position:relative;width:14rem;height:14rem;display:grid;place-items:center}
+.aro-vivo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.aro-vivo .anillo{fill:none;stroke:var(--metal);stroke-width:5}
+.aro-vivo .interior{fill:rgba(240,148,148,.08);stroke:var(--gema);stroke-width:1.2;stroke-dasharray:3 4}
+.aro-vivo .g{fill:var(--gema);stroke:#0E0C0A;stroke-width:2.5;stroke-linejoin:round}
+.lectura{text-align:center}
+.lectura .n{display:block;font:300 clamp(3rem,7vw,4.6rem)/1 var(--display);color:var(--crema)}
+.lectura .mm{font:400 .85rem/1.4 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--metal)}
+.controles{width:min(26rem,100%);display:grid;gap:.9rem}
+.controles label{font:600 .72rem/1 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--metal);display:flex;justify-content:space-between}
+input[type=range]{width:100%;accent-color:var(--gema);height:2rem}
+.calibra{font-size:.95rem;color:#B8AD9C}
+.calibra summary{cursor:pointer;font:600 .78rem/1.3 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--metal);padding:.4rem 0}
+.tarjeta-cal{margin:.8rem 0;height:3.4rem;border:1.5px dashed var(--metal);border-radius:6px;display:grid;place-items:center;font:400 .75rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--metal)}
+
+/* ============ LO DICEN · letras sobre la piedra ============ */
+.dicen{padding:clamp(4.5rem,10vw,8rem) 0;border-top:1px solid rgba(217,204,182,.1)}
+.dicen .kicker{color:var(--metal);text-align:center}
+.frase{margin:0;max-width:62rem}
+.frase p{font:300 italic clamp(1.9rem,4.4vw,3.5rem)/1.12 var(--texto);color:var(--crema);margin:0 0 1rem;letter-spacing:-.01em}
+.frase p b{font-weight:300;color:var(--gema)}
+.frase footer{font:400 .8rem/1.4 var(--display);letter-spacing:.2em;text-transform:uppercase;color:#8F8577}
+.frase.grande{margin:2rem auto 4.5rem;text-align:center}
+.frases-dos{display:grid;grid-template-columns:1fr 1fr;gap:3rem clamp(2rem,6vw,6rem);border-top:1px solid rgba(217,204,182,.1);padding-top:3.5rem}
+.frases-dos .frase p{font-size:clamp(1.4rem,2.4vw,1.9rem)}
+
+/* ============ VISITA · su fachada ============ */
+.visita{position:relative;color:var(--crema);background:#0E0C0A}
+.visita figure{margin:0;position:relative}
+.visita figure img{width:100%;height:clamp(22rem,56vw,40rem);object-fit:cover;object-position:40% 30%}
+.visita figure::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,12,10,.8),rgba(14,12,10,.25) 65%,transparent),linear-gradient(180deg,rgba(14,12,10,.1) 20%,rgba(14,12,10,.95) 92%)}
+.visita figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;padding-bottom:clamp(2rem,4vw,3rem)}
+.visita h2{color:var(--crema);max-width:40rem}
+.visita-datos{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:1rem 3rem;margin-top:1.4rem;font:400 1rem/1.5 var(--display);letter-spacing:.04em;color:#D6CBBA}
+.visita-datos strong{display:block;font-weight:600;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--metal);margin-bottom:.3rem}
+.visita-datos a{text-decoration:none;border-bottom:1px solid rgba(240,148,148,.4)}
+.visita .acciones{margin-top:1.6rem}
+.tienda-banda{padding:2.2rem 0;border-top:1px solid rgba(217,204,182,.1)}
+.tienda-banda .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem 2rem}
+.tienda-banda p{margin:0;color:#CFC4B4;font-size:1.15rem}
+.tienda-banda p b{font:600 1rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--crema);margin-right:.6rem}
+
+/* ============ CIERRE ============ */
+.cierre{position:relative;padding:clamp(3rem,6vw,4.5rem) 0 5rem;overflow:hidden;text-align:center}
+.cierre .silueta{display:block;width:100%;height:auto;min-height:5rem;margin:0 0 2.5rem;opacity:.35;pointer-events:none}
+.cierre .silueta{color:var(--metal)}
+.cierre img.logo{width:13rem;margin:0 auto 1.6rem}
+.cierre p{color:#B8AD9C;font-size:1rem;max-width:36rem;margin:0 auto 1rem}
+.legal{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.2rem;margin-top:1.5rem;font:400 .78rem/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.legal a{color:#9A8F80;text-decoration:none}
+.legal a:hover{color:var(--gema)}
+
+/* Barra de contacto fija en móvil */
+.barra{display:none}
+
+/* Entradas suaves (sin JS no esconden nada) */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .sube{animation:sube linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  }
+}
+@keyframes sube{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1240px){ .cab nav{display:none} .cab-tel{margin-left:auto} }
+@media (max-width:900px){
+  .escaparate .cabeza,.taller .grid,.talla .grid,.frases-dos{grid-template-columns:1fr}
+  .vitrinas{grid-template-columns:1fr}
+  .visita-datos{grid-template-columns:1fr 1fr}
+  .visita figcaption{position:relative;padding-top:1.8rem}
+  .visita figure img{height:clamp(16rem,52vw,24rem)}
+  .visita figure::after{background:linear-gradient(180deg,rgba(14,12,10,0) 55%,#0E0C0A)}
+  .visita figure::after{bottom:auto;height:clamp(16rem,52vw,24rem)}
+  .solitario{left:70%;width:2200px;top:-190px}
+  .portada-pie{grid-template-columns:1fr;padding-top:9.5rem}
+  .portada{min-height:0}
+  .cincuenta{display:none}
+  .dato-visita{text-align:left}
+}
+@media (max-width:640px){
+  .cab .wrap{min-height:3.8rem}
+  .cab-logo img{width:7.4rem}
+  .cab-tel span,.cab .btn span{display:none}
+  .cab .btn{padding:.6em .8em}
+  .solitario{width:1700px;left:68%;top:-20px}
+  .portada-pie{padding-top:13.5rem}
+  .portada .acciones .btn-linea{display:none}
+  .portada-pie{gap:1rem}
+  .visita-datos{grid-template-columns:1fr}
+  .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(14,12,10,.97);border-top:1px solid rgba(217,204,182,.18);padding:.35rem .35rem calc(.35rem + env(safe-area-inset-bottom))}
+  .barra a{display:flex;flex-direction:column;align-items:center;gap:.3rem;padding:.55rem 0;font:600 .7rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--crema);text-decoration:none}
+  .barra a.wa{color:var(--gema)}
+  .barra .ico{width:1.3rem;height:1.3rem}
+  body{padding-bottom:4.4rem}
+  .aro-vivo{width:12rem;height:12rem}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <!-- El solitario de su logo, trazado del PNG original (1344 px): vértice del aro en (0,0) -->
+  <symbol id="solitario-p" viewBox="-560 -260 1120 400">
+    <path style="fill:none;stroke:var(--s-aro,currentColor);stroke-width:9;stroke-linecap:round" d="M-520 60 C-430 96 -390 106 -307 106 C-170 106 -90 60 0 0 C90 60 170 106 305 106 C390 106 430 96 520 60"/>
+    <path style="fill:var(--s-gema,#F09494);stroke:var(--s-borde,#231D18);stroke-width:9;stroke-linejoin:round" d="M-74 -238 L79 -238 L142 -168 L0 -6 L-144 -168 Z"/>
+  </symbol>
+</svg>
+
+<div class="franja">Versión 1 (nota 7) · <a href="../">ver la v2</a> · la web oficial sigue en <a href="https://berraljoyeros.com/">berraljoyeros.com</a></div>
+
+<header class="cab">
+  <div class="wrap">
+    <a class="cab-logo" href="#inicio" aria-label="Berral Joyeros, inicio"><img src="../img/logo-claro.webp" width="672" height="220" alt="Berral Joyeros"></a>
+    <nav aria-label="Principal">
+      <a href="#escaparate">Compromiso</a>
+      <a href="#escaparate">Regalos</a>
+      <a href="#taller">Tu joya de siempre</a>
+      <a href="#talla">La talla</a>
+      <a href="#visita">Dónde estamos</a>
+    </nav>
+    <a class="cab-tel" href="tel:+34957453111" aria-label="Llamar al 957 45 31 11"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg><span>957 45 31 11</span></a>
+    <a class="btn btn-gema" href="https://wa.me/34640956035?text=Hola%2C%20Berral.%20Os%20escribo%20desde%20la%20web." aria-label="Escribir por WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- PORTADA -->
+  <section class="portada granito" aria-labelledby="h1">
+    <p class="cincuenta" aria-hidden="true">Fabricantes desde hace 50 años</p>
+    <div class="wrap portada-texto">
+      <p class="kicker">Joyería · Relojería · Taller — Córdoba</p>
+      <h1 id="h1">Tu joyería <em>de referencia,</em> a pie de calle en Medina Azahara.</h1>
+    </div>
+    <div class="wrap portada-pie">
+      <svg class="solitario" viewBox="-1500 -300 3000 520" aria-hidden="true" focusable="false">
+      <defs>
+        <clipPath id="clip-gema"><path d="M-74 -238 L79 -238 L142 -168 L0 -6 L-144 -168 Z"/></clipPath>
+        <linearGradient id="g-destello" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      </defs>
+      <path class="aro" d="M-1500 92 C-900 96 -560 106 -307 106 C-170 106 -90 60 0 0 C90 60 170 106 305 106 C560 106 900 96 1500 92"/>
+      <g class="piedra">
+        <path class="gema" d="M-74 -238 L79 -238 L142 -168 L0 -6 L-144 -168 Z"/>
+        <circle class="luz-punto" cx="52" cy="-170" r="16"/>
+        <g clip-path="url(#clip-gema)"><rect class="destello" x="-60" y="-260" width="70" height="280" fill="url(#g-destello)"/></g>
+      </g>
+    </svg>
+      <div>
+      <p class="entrada">Anillos de compromiso, regalos, comunión y relojes, con alguien que te asesora de verdad. Y las joyas que ya no te pones, las transformamos en nuestro taller.</p>
+      <div class="acciones">
+        <a class="btn btn-gema" href="https://wa.me/34640956035?text=Hola%2C%20Berral.%20Quer%C3%ADa%20preguntaros%20por%20" ><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Escríbenos por WhatsApp</a>
+        <a class="btn btn-linea" href="tel:+34957453111"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>957 45 31 11</a>
+        <a class="btn btn-linea" href="https://www.google.com/maps/dir/?api=1&destination=Berral+Joyeros+Av.+de+Medina+Azahara+8+C%C3%B3rdoba"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+      </div>
+      </div>
+      <p class="dato-visita"><strong>Av. de Medina Azahara, 8</strong>Mañanas hasta las 13:30 · tardes desde las 17:30</p>
+    </div>
+  </section>
+
+  <!-- EL ESCAPARATE -->
+  <section class="escaparate granito" id="escaparate" aria-labelledby="h-esc">
+    <div class="wrap">
+      <svg class="sep" viewBox="-560 -260 1120 400" aria-hidden="true"><use href="#solitario-p"/></svg>
+      <div class="cabeza">
+        <div>
+          <p class="kicker">El escaparate</p>
+          <h2 id="h-esc">Pásate a mirar. O asómate desde aquí.</h2>
+        </div>
+        <p>Cuatro vitrinas, como las de la tienda. Todo lo que ves está en la tienda con su precio. Si dudas entre dos, escríbenos y te lo enseñamos.</p>
+      </div>
+
+      <div class="vitrinas">
+        <article class="vitrina sube">
+          <div class="hueco"><span class="foco"></span><span class="peana"></span>
+            <div class="piezas">
+              <img loading="lazy" class="p-m" src="../img/comp-rosa.webp" width="248" height="428" alt="Solitario de oro rosa con cerco de bolitas">
+              <img loading="lazy" src="../img/ali-amarillo.webp" width="365" height="560" alt="Alianza de oro amarillo con brillantes">
+              <img loading="lazy" class="p-m" src="../img/comp-blanco.webp" width="229" height="420" alt="Solitario de oro blanco con cerco de bolitas">
+            </div>
+            <p class="tarjeta">Solitarios<b>desde 295 €</b></p>
+          </div>
+          <div class="placa">
+            <h3>Compromiso y alianzas</h3>
+            <p>71 anillos de compromiso y 60 modelos de alianzas en oro amarillo, blanco y rosa. Ven con tiempo, que se eligen sin prisa.</p>
+            <p class="cita">«Compré unos anillos de compromiso y acerté.»<span>Antonio M. · Google</span></p>
+            <div class="enlaces">
+              <a href="https://wa.me/34640956035?text=Hola%2C%20Berral.%20Estoy%20buscando%20anillo%20de%20compromiso%20o%20alianzas."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Pedir cita</a>
+              <a class="sec" href="https://berraljoyeros.com/categoria-producto/fabricacion-en-oro/anillos-de-compromiso-oro/">Ver los anillos <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vitrina sube">
+          <div class="hueco"><span class="foco"></span><span class="peana"></span>
+            <div class="piezas">
+              <img loading="lazy" class="p-m" src="../img/pend-verde.webp" width="560" height="452" alt="Pendientes de plata chapados en dorado con esmalte verde">
+              <img loading="lazy" src="../img/garg-a.webp" width="377" height="560" alt="Gargantilla plateada y dorada">
+              <img loading="lazy" class="p-m" src="../img/pend-perlas.webp" width="560" height="547" alt="Pendientes de plata chapados en dorado con perlas">
+            </div>
+            <p class="tarjeta">Novedades<b>de 60 € a 129 €</b></p>
+          </div>
+          <div class="placa">
+            <h3>Regalos que se aciertan</h3>
+            <p>Pendientes, gargantillas y pulseras de plata, oro y acero. Dinos para quién es y cuánto quieres gastar: te proponemos tres.</p>
+            <p class="cita">«Todos los regalos que he comprado han encantado.»<span>Paloma C.R. · Google</span></p>
+            <div class="enlaces">
+              <a href="https://wa.me/34640956035?text=Hola%2C%20Berral.%20Busco%20un%20regalo%20para%20"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Pedir ideas</a>
+              <a class="sec" href="https://berraljoyeros.com/tienda/">Ver la tienda <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vitrina sube">
+          <div class="hueco"><span class="foco"></span><span class="peana"></span>
+            <div class="piezas">
+              <img loading="lazy" src="../img/com-cruz.webp" width="199" height="560" alt="Colgante de cruz con piedras azules">
+              <img loading="lazy" class="p-s" src="../img/conjunto-perla.webp" width="524" height="560" alt="Conjunto de plata con perla: anillo, pendientes y colgante">
+            </div>
+            <p class="tarjeta">Comunión<b>desde 42 €</b></p>
+          </div>
+          <div class="placa">
+            <h3>Para la comunión</h3>
+            <p>164 regalos de comunión: cruces, medallas, pendientes y primeros relojes. Y el grabado, que no se olvide.</p>
+            <div class="enlaces">
+              <a href="https://wa.me/34640956035?text=Hola%2C%20Berral.%20Busco%20un%20regalo%20de%20comuni%C3%B3n."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Preguntar</a>
+              <a class="sec" href="https://berraljoyeros.com/categoria-producto/regalos-para-comuniones/">Ver los regalos <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vitrina sube">
+          <div class="hueco"><span class="foco"></span><span class="peana"></span>
+            <div class="piezas">
+              <img loading="lazy" class="p-m" src="../img/rel-azul.webp" width="452" height="560" alt="Reloj Citizen Eco-Drive cronógrafo de esfera azul">
+              <img loading="lazy" src="../img/rel-verde.webp" width="358" height="560" alt="Reloj Citizen automático de esfera verde">
+              <img loading="lazy" class="p-m" src="../img/rel-blanco.webp" width="456" height="560" alt="Reloj Citizen Eco-Drive de esfera blanca y correa de piel">
+            </div>
+            <p class="tarjeta">Citizen<b>desde 189 €</b></p>
+          </div>
+          <div class="placa">
+            <h3>Relojes, y su pila</h3>
+            <p>Citizen, Casio y Duward en la tienda. Y si el tuyo se ha parado, tráelo: le cambiamos la pila y lo revisamos.</p>
+            <p class="cita">«Pequeña gran joyería relojería.»<span>Francisco José A. · Google</span></p>
+            <div class="enlaces">
+              <a href="https://wa.me/34640956035?text=Hola%2C%20Berral.%20Os%20escribo%20por%20un%20reloj."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Preguntar</a>
+              <a class="sec" href="https://berraljoyeros.com/categoria-producto/relojeria/">Ver los relojes <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TU JOYA DE SIEMPRE -->
+  <section class="taller" id="taller" aria-labelledby="h-taller">
+    <div class="wrap grid">
+      <div class="sube">
+        <p class="kicker">Autoreciclaje · en nuestro taller</p>
+        <h2 id="h-taller">Tu joya de siempre, <em>con otra forma.</em></h2>
+        <p class="lead">Todos guardamos joyas de un bautizo, una comunión, una boda o una herencia que ya no nos ponemos. Las convertimos en una pieza nueva, a tu gusto de hoy.</p>
+        <ul class="conserva">
+          <li>Conservas el metal y las piedras de la joya antigua.</li>
+          <li>Tienes una joya nueva y única.</li>
+          <li>Guardas su valor sentimental.</li>
+          <li>Te sale más a cuenta que comprarla nueva.</li>
+        </ul>
+        <p class="nota-fuente">Rellena el sobre como lo haríamos en el mostrador. Te llega a WhatsApp con el texto escrito: solo tienes que añadir una foto de la joya.</p>
+      </div>
+
+      <form class="sobre sube" id="sobre" aria-label="Sobre de encargo para transformar una joya">
+        <div class="sobre-cab">
+          <img loading="lazy" src="../img/logo-tinta.webp" width="672" height="220" alt="">
+          <span>Encargo de taller<br>Nº <output id="num">—</output></span>
+        </div>
+        <fieldset class="campo">
+          <legend>Qué traes</legend>
+          <div class="chips">
+            <input type="radio" name="traes" id="t1" value="una alianza" checked><label for="t1">Una alianza</label>
+            <input type="radio" name="traes" id="t2" value="un anillo"><label for="t2">Un anillo</label>
+            <input type="radio" name="traes" id="t3" value="una cadena"><label for="t3">Una cadena</label>
+            <input type="radio" name="traes" id="t4" value="unos pendientes"><label for="t4">Pendientes</label>
+            <input type="radio" name="traes" id="t5" value="una medalla"><label for="t5">Una medalla</label>
+            <input type="radio" name="traes" id="t6" value="varias joyas"><label for="t6">Varias</label>
+          </div>
+        </fieldset>
+        <fieldset class="campo">
+          <legend>Qué te gustaría</legend>
+          <div class="chips">
+            <input type="radio" name="quiero" id="q1" value="un colgante" checked><label for="q1">Un colgante</label>
+            <input type="radio" name="quiero" id="q2" value="un anillo"><label for="q2">Un anillo</label>
+            <input type="radio" name="quiero" id="q3" value="unos pendientes"><label for="q3">Pendientes</label>
+            <input type="radio" name="quiero" id="q4" value="que me aconsejéis"><label for="q4">Que me aconsejéis</label>
+          </div>
+        </fieldset>
+        <div class="campo">
+          <label class="t" for="cuenta">Algo que quieras contarnos</label>
+          <textarea id="cuenta" name="cuenta" placeholder="Era de mi abuela y quiero llevarla a diario…"></textarea>
+        </div>
+        <a class="btn btn-tinta" id="enviar-sobre" href="https://wa.me/34640956035"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Mandar el encargo</a>
+        <small><svg class="ico" aria-hidden="true"><use href="#i-cam"/></svg>En WhatsApp, añade una foto de la joya.</small>
+      </form>
+    </div>
+  </section>
+
+  <!-- LA TALLA -->
+  <section class="talla granito" id="talla" aria-labelledby="h-talla">
+    <div class="wrap grid">
+      <div class="sube">
+        <p class="kicker">Medidor de talla</p>
+        <h2 id="h-talla">¿Anillo sorpresa? Averigua su talla.</h2>
+        <p>Coge un anillo que se ponga y déjalo sobre el aro de la pantalla. Mueve la barra hasta que el círculo punteado quede justo por dentro del anillo. Esa es su talla.</p>
+        <p>Si no te fías, tráenos el anillo: lo medimos en un momento y te guardamos el secreto.</p>
+        <div class="enlaces"><a id="wa-talla" href="https://wa.me/34640956035"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Mandar la talla</a></div>
+      </div>
+      <div class="medidor sube">
+        <div class="aro-vivo" aria-hidden="true">
+          <svg viewBox="-100 -100 200 200">
+            <circle class="anillo" id="c-anillo" r="60"/>
+            <circle class="interior" id="c-int" r="57"/>
+            <path class="g" id="c-gema" d="M-6 -80 L6 -80 L11 -74 L0 -62 L-11 -74 Z"/>
+          </svg>
+        </div>
+        <p class="real">A tamaño real</p>
+        <p class="lectura" aria-live="polite"><span class="n" id="talla-n">Talla 12</span><span class="mm" id="talla-mm">16,6 mm de diámetro</span></p>
+        <div class="controles">
+          <label for="r-diam"><span>Diámetro interior</span><span id="r-val">16,6 mm</span></label>
+          <input type="range" id="r-diam" min="14" max="23" step="0.1" value="16.6">
+          <details class="calibra">
+            <summary>Ajustar a tu pantalla (con una tarjeta)</summary>
+            <p>Pon una tarjeta bancaria o de transporte sobre el rectángulo y mueve la barra hasta que tenga su mismo ancho.</p>
+            <div class="tarjeta-cal" id="t-cal">85,6 mm</div>
+            <label for="r-cal"><span>Ancho de la tarjeta</span></label>
+            <input type="range" id="r-cal" min="200" max="480" step="1" value="324">
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO DICEN -->
+  <section class="dicen granito" aria-labelledby="h-dicen">
+    <div class="wrap">
+      <p class="kicker" id="h-dicen">Lo dicen en Google</p>
+      <blockquote class="frase grande sube">
+        <p>«Sin duda mi joyería de referencia. <b>Eva</b> es una magnífica asesora.»</p>
+        <footer>Paloma C.R. · reseña en Google</footer>
+      </blockquote>
+      <div class="frases-dos">
+        <blockquote class="frase sube">
+          <p>«Acudo a ella desde hace años y siempre nos han atendido con amabilidad.»</p>
+          <footer>M. Teresa Díaz · reseña en Google</footer>
+        </blockquote>
+        <blockquote class="frase sube">
+          <p>«Me dieron solución para un encargo de aniversario y quedamos muy satisfechos.»</p>
+          <footer>Alejandro M. · reseña en Google</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISITA -->
+  <section class="visita" id="visita" aria-labelledby="h-visita">
+    <figure>
+      <img src="../img/fachada-1280.webp" srcset="../img/fachada-720.webp 720w, ../img/fachada-1280.webp 1280w" sizes="100vw" width="1280" height="720" loading="lazy" alt="La fachada de Berral Joyeros de noche: granito negro, letras metálicas y los escaparates encendidos">
+      <figcaption>
+        <div class="wrap">
+          <p class="kicker" style="color:var(--gema)">Dónde estamos</p>
+          <h2 id="h-visita">Av. de Medina Azahara, 8. Con los escaparates encendidos.</h2>
+          <div class="visita-datos">
+            <p><strong>Dirección</strong>Poniente Sur · 14005 Córdoba</p>
+            <p><strong>Horario</strong>Mañanas hasta las 13:30<br>Tardes desde las 17:30</p>
+            <p><strong>Teléfonos</strong><a href="tel:+34957453111">957 45 31 11</a> · <a href="tel:+34640956035">640 95 60 35</a></p>
+          </div>
+          <div class="acciones">
+            <a class="btn btn-gema" href="https://www.google.com/maps/dir/?api=1&destination=Berral+Joyeros+Av.+de+Medina+Azahara+8+C%C3%B3rdoba"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+            <a class="btn btn-linea" href="https://wa.me/34640956035?text=Hola%2C%20Berral."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+    <div class="tienda-banda granito">
+      <div class="wrap">
+        <p><b>La tienda online</b>1.697 piezas con su precio, para mirar desde casa.</p>
+        <div class="enlaces"><a class="sec" href="https://berraljoyeros.com/tienda/">Entrar en la tienda <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <footer class="cierre granito">
+    <svg class="silueta" viewBox="-1200 -260 2400 380" aria-hidden="true" focusable="false">
+      <path d="M-1500 92 C-900 96 -560 106 -307 106 C-170 106 -90 60 0 0 C90 60 170 106 305 106 C560 106 900 96 1500 92" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+      <path d="M-74 -238 L79 -238 L142 -168 L0 -6 L-144 -168 Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round"/>
+    </svg>
+    <div class="wrap">
+      <img class="logo" src="../img/logo-claro.webp" width="672" height="220" alt="Berral Joyeros" loading="lazy">
+      <p>Joyería, relojería y taller en Av. de Medina Azahara, 8 · 14005 Córdoba.</p>
+      <p><a href="tel:+34957453111">957 45 31 11</a> · <a href="https://wa.me/34640956035">WhatsApp 640 95 60 35</a> · <a href="https://www.instagram.com/iloveberral/">Instagram @iloveberral</a></p>
+      <nav class="legal" aria-label="Legal">
+        <a href="https://berraljoyeros.com/aviso-legal/">Aviso legal</a>
+        <a href="https://berraljoyeros.com/politica-privacidad/">Privacidad</a>
+        <a href="https://berraljoyeros.com/politica-de-cookies/">Cookies</a>
+        <a href="https://berraljoyeros.com/envio-y-entrega/">Envíos</a>
+        <a href="https://berraljoyeros.com/devoluciones-y-reclamaciones/">Devoluciones</a>
+      </nav>
+    </div>
+  </footer>
+</main>
+
+<nav class="barra" aria-label="Contacto rápido">
+  <a href="tel:+34957453111"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+  <a class="wa" href="https://wa.me/34640956035?text=Hola%2C%20Berral."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Berral+Joyeros+Av.+de+Medina+Azahara+8+C%C3%B3rdoba"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var WA='https://wa.me/34640956035?text=';
+  var $=function(s){return document.querySelector(s)};
+
+  /* El sobre de encargo: compone el mensaje de WhatsApp */
+  var sobre=$('#sobre'), btn=$('#enviar-sobre');
+  var n=$('#num'); n.textContent=String(Date.now()).slice(-4);
+  function msgSobre(){
+    var t=sobre.querySelector('input[name=traes]:checked').value;
+    var q=sobre.querySelector('input[name=quiero]:checked').value;
+    var c=$('#cuenta').value.trim();
+    var m='Hola, Berral. Tengo '+t+' que ya no me pongo y me gustaría transformarla en '+q+'.';
+    if(q==='que me aconsejéis') m='Hola, Berral. Tengo '+t+' que ya no me pongo y me gustaría que me aconsejéis cómo transformarla.';
+    if(c) m+=' '+c;
+    m+=' Os mando una foto.';
+    btn.href=WA+encodeURIComponent(m);
+  }
+  sobre.addEventListener('change',msgSobre); sobre.addEventListener('input',msgSobre); msgSobre();
+
+  /* Medidor de talla: talla española = perímetro interior en mm − 40 */
+  var rd=$('#r-diam'), rc=$('#r-cal'), tc=$('#t-cal');
+  var cAn=$('#c-anillo'), cIn=$('#c-int'), cG=$('#c-gema'), box=document.querySelector('.aro-vivo');
+  var pxmm=null;
+  try{ var g=localStorage.getItem('berral-pxmm'); if(g) pxmm=parseFloat(g); }catch(e){}
+  function calPx(){ return parseFloat(rc.value)/85.6; }
+  if(pxmm){ rc.value=Math.round(pxmm*85.6); } else { pxmm=calPx(); }
+  function pinta(){
+    var d=parseFloat(rd.value), talla=Math.round(Math.PI*d-40);
+    var w=box.getBoundingClientRect().width||288; var u=200/w;          // unidades SVG por píxel
+    var rIn=(d/2)*pxmm*u, rAn=rIn+3.2;
+    cIn.setAttribute('r',rIn.toFixed(2)); cAn.setAttribute('r',rAn.toFixed(2));
+    cG.setAttribute('transform','translate(0 '+(-(rAn)+60).toFixed(2)+')');
+    var dmm=d.toFixed(1).replace('.',',');
+    $('#talla-n').textContent='Talla '+talla; $('#talla-mm').textContent=dmm+' mm de diámetro'; $('#r-val').textContent=dmm+' mm';
+    $('#wa-talla').href=WA+encodeURIComponent('Hola, Berral. La talla de anillo que necesito es la '+talla+' ('+dmm+' mm de diámetro interior).');
+  }
+  function cal(){ tc.style.width=rc.value+'px'; pxmm=calPx(); try{localStorage.setItem('berral-pxmm',pxmm)}catch(e){} pinta(); }
+  tc.style.width=rc.value+'px'; tc.style.maxWidth='100%';
+  rd.addEventListener('input',pinta); rc.addEventListener('input',cal); window.addEventListener('resize',pinta); pinta();
+})();
+</script>
+</body>
+</html>
