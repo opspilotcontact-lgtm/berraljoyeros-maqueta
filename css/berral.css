@@ -1,89 +1,97 @@
-/* Berral Joyeros · sistema v2 (30-sep)
-   Una sola familia: Jost (su web ya la usa y es la letra Futura de sus corpóreas).
-   Sin cursivas de color, sin etiquetas en versales, sin píldoras.
+/* Berral Joyeros · sistema v3 (1-oct)
+   Una familia: Jost (su web la usa; sus corpóreas son una Futura de peso medio → titulares a 500).
+   Sin cursivas, sin etiquetas en versales, sin flechas, sin fade-up. El rosa solo en la gema y en lo elegido.
    Paleta MEDIDA: granito y luz en la foto de su fachada; la gema, en el PNG del logo. */
-@font-face{font-family:'Jost';src:url(../fonts/jost-var-latin.woff2) format('woff2');font-weight:200 600;font-style:normal;font-display:optional}
+@font-face{font-family:'Jost';src:url(../fonts/jost-var-latin.woff2) format('woff2');font-weight:200 600;font-style:normal;font-display:block}
 
 :root{
-  --granito:#15120F; --junta:rgba(236,226,210,.06);
-  --metal:#D9CCB6; --crema:#EDE4D6; --gris-calido:#A89D8E;
+  --granito:#15120F; --granito-2:#1C1814;
+  --metal:#D9CCB6; --marfil:#ECE3D4; --crema:#EDE4D6; --gris-calido:#B3A797;
   --luz:#E3C8A3; --ambar:#A57A39; --laton:#B8904E;
   --gema:#F09494;
-  --papel:#F6EFE4; --vitrina:#F1E6D4; --tinta:#231D18; --tinta-2:#5E5247; --filete:rgba(35,29,24,.14);
+  --papel:#F6EFE4; --vitrina:#F1E6D4; --tinta:#231D18; --tinta-2:#5A4E43; --filete:rgba(35,29,24,.14);
   --letra:'Jost','Futura','Century Gothic',sans-serif;
   --curva:cubic-bezier(.22,.8,.28,1);
+  --fino:'\202F';
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:5.5rem}
-body{margin:0;background:var(--granito);color:var(--tinta);font:400 1.0625rem/1.65 var(--letra)}
+body{margin:0;background:var(--granito);color:var(--tinta);font:400 1.0625rem/1.65 var(--letra);font-variant-numeric:tabular-nums lining-nums;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--gema);color:var(--granito)}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 main{overflow-x:clip}
-h1,h2,h3{font-weight:300;letter-spacing:-.012em;margin:0;line-height:1.08}
+h1,h2,h3{font-weight:500;letter-spacing:-.018em;margin:0;line-height:1.06;text-wrap:balance}
+p,li,dd{text-wrap:pretty}
 p{margin:0 0 1em}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--gema);outline-offset:3px}
+:focus-visible{outline:2px solid var(--gema);outline-offset:3px;border-radius:1px}
 .wrap{max-width:78rem;margin:0 auto;padding:0 clamp(1rem,4vw,2.75rem)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.ico{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ico{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-/* El granito en placas de su fachada */
-.granito{background-color:var(--granito);color:var(--crema);
-  background-image:linear-gradient(var(--junta) 1px,transparent 1px),linear-gradient(90deg,var(--junta) 1px,transparent 1px),
-    radial-gradient(rgba(236,226,210,.055) .6px,transparent .9px),radial-gradient(rgba(0,0,0,.35) .7px,transparent 1px);
-  background-size:12rem 12rem,12rem 12rem,5px 5px,7px 7px;background-position:-1px -1px,-1px -1px,0 0,2px 3px}
+/* Granito de su fachada: grano fractal con motas cálidas (Negro Galaxy) y vetas oscuras, sin trama */
+.granito{background-color:var(--granito);color:var(--crema);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .80 0 0 0 0 .64 0 0 0 0 .40 0 0 0 2.4 -1.72'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.035' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .7 -.28'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");background-size:240px 240px,300px 300px}
 .papel{background:var(--papel);color:var(--tinta)}
 
-/* El contraste de ley: el punzón que llevan grabado sus piezas (750 oro · 925 plata) */
-.ley{display:inline-flex;align-items:center;justify-content:center;min-width:2.5em;height:1.55em;padding:0 .45em;
-  border:1px solid currentColor;border-radius:.8em;font:500 .72rem/1 var(--letra);letter-spacing:.06em;opacity:.85}
+/* El punzón: grabado con un filete de 1 px; cartela con chaflanes (oro 750) y óvalo (plata 925) */
+.ley{position:relative;display:inline-grid;place-items:center;height:1.55em;min-width:2.8em;padding:0 .45em;font:500 .68rem/1 var(--letra);letter-spacing:.06em;
+  color:currentColor;vertical-align:middle;
+  clip-path:polygon(.4em 0,calc(100% - .4em) 0,100% .4em,100% calc(100% - .4em),calc(100% - .4em) 100%,.4em 100%,0 calc(100% - .4em),0 .4em);
+  background:linear-gradient(currentColor,currentColor) top/100% 1px no-repeat,linear-gradient(currentColor,currentColor) bottom/100% 1px no-repeat,
+    linear-gradient(currentColor,currentColor) left/1px 100% no-repeat,linear-gradient(currentColor,currentColor) right/1px 100% no-repeat}
+.ley::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(45deg,transparent calc(50% - .5px),currentColor calc(50% - .5px),currentColor calc(50% + .5px),transparent calc(50% + .5px)) top left/.4em .4em no-repeat,
+    linear-gradient(-45deg,transparent calc(50% - .5px),currentColor calc(50% - .5px),currentColor calc(50% + .5px),transparent calc(50% + .5px)) top right/.4em .4em no-repeat,
+    linear-gradient(-45deg,transparent calc(50% - .5px),currentColor calc(50% - .5px),currentColor calc(50% + .5px),transparent calc(50% + .5px)) bottom left/.4em .4em no-repeat,
+    linear-gradient(45deg,transparent calc(50% - .5px),currentColor calc(50% - .5px),currentColor calc(50% + .5px),transparent calc(50% + .5px)) bottom right/.4em .4em no-repeat}
+.ley.plata{clip-path:none;background:none;border:1px solid currentColor;border-radius:50%/50%;min-width:3.1em}
+.ley.plata::before{display:none}
 
-/* Botones: rectángulos finos, caja normal */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.1rem;padding:0 1.5rem;border-radius:2px;
-  font:400 1rem/1 var(--letra);letter-spacing:.01em;text-decoration:none;cursor:pointer;border:1px solid transparent;
+/* Botones: rectos y finos. Marfil sobre granito, tinta sobre papel. Un solo estilo de enlace. */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.1rem;padding:0 1.5rem;border-radius:1px;
+  font:500 .98rem/1 var(--letra);letter-spacing:.005em;text-decoration:none;cursor:pointer;border:1px solid transparent;
   transition:background-color .3s var(--curva),color .3s var(--curva),border-color .3s var(--curva)}
-.btn-gema{background:var(--gema);color:var(--granito)}
-.btn-gema:hover{background:#F4A9A9}
-.btn-linea{border-color:rgba(217,204,182,.5);color:var(--crema);background:transparent}
+.btn-metal{background:var(--marfil);color:var(--granito)}
+.btn-metal:hover{background:#FFF8EC}
+.btn-linea{border-color:rgba(217,204,182,.42);color:var(--crema);background:transparent}
 .btn-linea:hover{border-color:var(--crema)}
 .btn-tinta{background:var(--tinta);color:var(--papel)}
 .btn-tinta:hover{background:#3A3029}
-.btn-linea-t{border-color:var(--tinta);color:var(--tinta);background:transparent}
-.btn-linea-t:hover{background:var(--tinta);color:var(--papel)}
-.enlace{display:inline-flex;align-items:baseline;gap:.4rem;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.1rem;
-  transition:color .25s,border-color .25s}
-.enlace:hover{color:var(--gema)}
-.flecha::after{content:"→";font-weight:300}
+.btn-linea-t{border-color:rgba(35,29,24,.55);color:var(--tinta);background:transparent}
+.btn-linea-t:hover{border-color:var(--tinta);background:var(--tinta);color:var(--papel)}
+.enlace{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.32em;text-decoration-color:rgba(127,112,96,.55);transition:text-decoration-color .25s,color .25s}
+.enlace:hover{text-decoration-color:currentColor}
 
-/* Franja de propuesta */
-.franja{background:#0B0908;color:#9C9282;font:400 .8rem/1.4 var(--letra);text-align:center;padding:.45rem 1rem}
-.franja a{color:var(--gema)}
+/* Franja de propuesta: discreta */
+.franja{background:#0B0908;color:#8F8577;font:400 .74rem/1.4 var(--letra);text-align:center;padding:.35rem 1rem;letter-spacing:.01em}
+.franja a{color:var(--metal)}
 
 /* Cabecera */
-.cab{position:sticky;top:0;z-index:40;background:rgba(21,18,15,.95);backdrop-filter:blur(6px);border-bottom:1px solid rgba(217,204,182,.1);color:var(--crema)}
+.cab{position:sticky;top:0;z-index:40;background:rgba(21,18,15,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(217,204,182,.1);color:var(--crema)}
 .cab .wrap{display:flex;align-items:center;gap:2rem;min-height:4.6rem}
 .cab-logo img{width:9.2rem}
 .cab nav{display:flex;gap:1.9rem;margin:0 auto}
-.cab nav a{font:400 .96rem/1 var(--letra);color:var(--metal);text-decoration:none;padding:.5rem 0;border-bottom:1px solid transparent;white-space:nowrap}
-.cab nav a:hover,.cab nav a[aria-current]{color:var(--crema);border-color:var(--gema)}
+.cab nav a{font:400 .95rem/1 var(--letra);color:var(--metal);text-decoration:none;padding:.5rem 0;border-bottom:1px solid transparent;white-space:nowrap}
+.cab nav a:hover,.cab nav a[aria-current]{color:var(--crema);border-color:rgba(236,226,210,.6)}
 .cab-der{display:flex;align-items:center;gap:1.2rem}
-.cab-tel{font:400 .98rem/1 var(--letra);color:var(--crema);text-decoration:none;white-space:nowrap}
-.cab .btn{min-height:2.6rem;padding:0 1.1rem;font-size:.95rem}
-.cab-lista{position:relative;display:inline-flex;align-items:center;gap:.35rem;color:var(--metal);text-decoration:none;font-size:.95rem;background:none;border:0;cursor:pointer;padding:.4rem 0}
-.cab-lista b{font-weight:500;color:var(--gema)}
-
-/* Separador: el solitario pequeño (estilos con variables: el CSS no atraviesa <use>) */
-.sep{display:block;width:9rem;height:auto;overflow:visible;color:var(--metal);--s-borde:#0E0C0A}
+.cab-tel{font:500 .98rem/1 var(--letra);color:var(--crema);text-decoration:none;white-space:nowrap}
+.cab .btn{min-height:2.6rem;padding:0 1.1rem;font-size:.92rem}
+.cab-lista{display:inline-flex;align-items:center;gap:.4rem;color:var(--metal);background:none;border:0;cursor:pointer;padding:.4rem 0;font-size:.95rem}
+.cab-lista b{font-weight:500;color:var(--crema)}
+.cab-lista b::before{content:"(";font-weight:400}.cab-lista b::after{content:")";font-weight:400}
+.cab-lista b:empty{display:none}
 
 /* Pie */
 .cierre{padding:clamp(3rem,6vw,4.5rem) 0 4.5rem;text-align:center;color:var(--gris-calido)}
-.cierre .silueta{display:block;width:100%;height:auto;min-height:5rem;margin:0 0 2.5rem;opacity:.32;color:var(--metal)}
+.cierre .silueta{display:block;width:100%;height:auto;min-height:5rem;margin:0 0 2.5rem;opacity:.3;color:var(--metal)}
 .cierre img.logo{width:12rem;margin:0 auto 1.5rem}
 .cierre p{max-width:38rem;margin:0 auto .8rem;font-size:.98rem}
 .cierre a{color:var(--crema)}
 .legal{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.5rem;margin-top:1.4rem;font-size:.85rem}
-.legal a{color:#8F8577;text-decoration:none}
-.legal a:hover{color:var(--gema)}
+.legal a{color:#9A8F80;text-decoration:none}
+.legal a:hover{color:var(--crema)}
 
 /* Barra de contacto en móvil */
 .barra{display:none}
@@ -94,8 +102,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .cab-tel{display:none}
   .barra{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(14,12,10,.97);
     border-top:1px solid rgba(217,204,182,.16);padding:.3rem .3rem calc(.3rem + env(safe-area-inset-bottom))}
-  .barra a{display:flex;flex-direction:column;align-items:center;gap:.28rem;padding:.55rem 0;font:400 .8rem/1 var(--letra);color:var(--crema);text-decoration:none}
-  .barra a.wa{color:var(--gema)}
+  .barra a{display:flex;flex-direction:column;align-items:center;gap:.3rem;padding:.55rem 0;font:400 .8rem/1 var(--letra);color:var(--crema);text-decoration:none}
   .barra .ico{width:1.25rem;height:1.25rem}
   body{padding-bottom:4.4rem}
 }
